@@ -149,6 +149,7 @@
     flex-direction: column;
     gap: 0.75rem;
     margin-bottom: 1rem;
+    width: 100%;
 }
 
 .quiz-statement-btn {
@@ -163,6 +164,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: left;
+    box-sizing: border-box;
 }
 
 .quiz-statement-btn:hover:not(:disabled) {
@@ -386,5 +388,9 @@
         width: 28px;
         height: 28px;
         font-size: 0.9rem;
+    }
+    
+    .quiz-statement-btn:hover:not(:disabled) {
+        transform: none;
     }
 }
