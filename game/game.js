@@ -60,7 +60,7 @@ class MemoryGame {
                     <button class="game-close" id="gameClose">×</button>
                     
                     <div class="game-header">
-                        <h2 class="game-title">🧠 Migration Memory</h2>
+                        <h2 class="game-title"><span class="title-emoji">🧠</span> Migration Memory</h2>
                         <p class="game-subtitle">Match the clinic cards!</p>
                     </div>
                     

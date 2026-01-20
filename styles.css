@@ -356,6 +356,11 @@ img {
     margin-bottom: 0.5rem;
 }
 
+.games-hub-title .title-emoji {
+    -webkit-text-fill-color: initial;
+    background: none;
+}
+
 .games-hub-subtitle {
     color: rgba(255, 255, 255, 0.6);
     margin-bottom: 2rem;

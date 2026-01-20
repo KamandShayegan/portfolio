@@ -115,6 +115,11 @@
     background-clip: text;
 }
 
+.game-title .title-emoji {
+    -webkit-text-fill-color: initial;
+    background: none;
+}
+
 .game-subtitle {
     color: var(--text-secondary);
     font-size: 1rem;
