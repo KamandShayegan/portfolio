@@ -1,0 +1,419 @@
+/* ========================================
+   Memory Game Styles
+   ======================================== */
+
+/* Play Button */
+.game-trigger {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.play-game-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, rgba(192, 132, 252, 0.2), rgba(244, 114, 182, 0.2));
+    border: 2px solid rgba(192, 132, 252, 0.4);
+    border-radius: 50px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.play-game-btn:hover {
+    background: linear-gradient(135deg, rgba(192, 132, 252, 0.3), rgba(244, 114, 182, 0.3));
+    border-color: rgba(192, 132, 252, 0.6);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(192, 132, 252, 0.3);
+}
+
+.play-game-btn .game-icon {
+    font-size: 1.4rem;
+    animation: iconBounce 2s infinite;
+}
+
+@keyframes iconBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Modal Overlay */
+.game-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 10000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.game-modal.active {
+    display: flex;
+}
+
+/* Game Container */
+.game-container {
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 700px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Close Button */
+.game-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.game-close:hover {
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+}
+
+/* Game Header */
+.game-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.game-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.game-subtitle {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Game Stats */
+.game-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 25px;
+}
+
+.game-stats.hidden {
+    display: none;
+}
+
+.game-stat {
+    text-align: center;
+}
+
+.game-stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+.game-stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Countdown - shown in stats area */
+.countdown-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.countdown-display.hidden {
+    display: none;
+}
+
+.countdown-number {
+    font-size: 3rem;
+    font-weight: 700;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: countdownPulse 1s ease-in-out infinite;
+}
+
+.countdown-text {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+@keyframes countdownPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Game Board */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+/* Game Card */
+.game-card {
+    aspect-ratio: 1;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.game-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+.game-card.flipped .game-card-inner {
+    transform: rotateY(180deg);
+}
+
+.game-card.matched .game-card-inner {
+    transform: rotateY(180deg);
+}
+
+.game-card.matched {
+    pointer-events: none;
+}
+
+.game-card.matched .game-card-front,
+.game-card.matched .game-card-back {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.game-card-front,
+.game-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card-front {
+    background: var(--bg-card);
+}
+
+.game-card-back {
+    background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-card));
+    transform: rotateY(180deg);
+}
+
+.game-card-flag {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.game-card-name {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.game-card-question {
+    font-size: 2.5rem;
+    color: var(--accent-primary);
+}
+
+/* Win Screen */
+.win-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 10, 18, 0.98);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.win-screen.active {
+    display: flex;
+}
+
+.win-trophy {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    animation: trophyBounce 0.5s ease infinite alternate;
+}
+
+@keyframes trophyBounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+.win-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+}
+
+.win-message {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.win-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.play-again-btn {
+    background: var(--accent-gradient);
+    color: var(--bg-primary);
+    border: none;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    font-family: var(--font-primary);
+}
+
+.play-again-btn:hover {
+    transform: scale(1.05);
+}
+
+.close-game-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: var(--font-primary);
+}
+
+.close-game-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* Confetti */
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    top: -10px;
+    z-index: 10001;
+    animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+    to {
+        transform: translateY(100vh) rotate(720deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .game-container {
+        padding: 20px;
+        padding-top: 50px;
+    }
+
+    .game-board {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .game-title {
+        font-size: 1.4rem;
+    }
+
+    .countdown-number {
+        font-size: 4rem;
+    }
+
+    .game-card-flag {
+        font-size: 1.5rem;
+    }
+
+    .game-card-name {
+        font-size: 0.6rem;
+    }
+
+    .game-stats {
+        gap: 20px;
+    }
+
+    .game-stat-value {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .game-board {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

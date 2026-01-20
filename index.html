@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamand Shayegan | Data Migration Specialist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="game/game.css">
+    <link rel="stylesheet" href="game/scramble.css">
+    <link rel="stylesheet" href="game/timeline.css">
+    <link rel="stylesheet" href="game/quiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">KS</div>
+        <ul class="nav-links">
+            <li><a href="#current-role">Current Role</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button class="nav-games-btn" id="openGamesHub">🎮 Games</button></li>
+            <li><button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-visual-wrapper">
+                <div class="hero-visual" data-animate="fade-up" data-delay="100">
+                    <div class="profile-image-container">
+                        <img src="profile.JPG" alt="Kamand Shayegan" class="profile-image">
+                    </div>
+                </div>
+                <blockquote class="profile-quote" data-animate="fade-up" data-delay="200">
+                    "I believe tech should be fun—so explore my portfolio and enjoy the journey!"
+                    <span class="quote-sparkle">✨</span>
+                </blockquote>
+            </div>
+            <div class="hero-text">
+                <p class="hero-greeting" data-animate="fade-up">Hello, I'm</p>
+                <h1 class="hero-name" data-animate="fade-up" data-delay="100">Kamand Shayegan</h1>
+                <p class="hero-title" data-animate="fade-up" data-delay="200">Data Migration Specialist</p>
+                <p class="hero-location" data-animate="fade-up" data-delay="300">
+                    <span class="location-icon">📍</span> 00180 Helsinki, Finland
+                </p>
+                <p class="hero-about" data-animate="fade-up" data-delay="350">
+                    Data Migration Specialist with 3+ years of programming experience. 
+                    I transform complex data challenges into seamless solutions, helping veterinary clinics transition their systems to <span class="highlight-brand">Provet</span> smoothly.
+                </p>
+                <div class="hero-stats" data-animate="fade-up" data-delay="400">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">8</span>
+                        <span class="hero-stat-label">Countries Served</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">3+</span>
+                        <span class="hero-stat-label">Years Experience</span>
+                    </div>
+                </div>
+                <div class="hero-cta" data-animate="fade-up" data-delay="450">
+                    <a href="#current-role" class="btn btn-primary">See My Current Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Role Section -->
+    <section class="section current-role" id="current-role">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">
+                Current Role
+                <img src="https://em-content.zobj.net/source/apple/391/dog-face_1f436.png" alt="Dog" class="title-emoji">
+            </h2>
+            <div class="role-card" data-animate="fade-up" data-delay="100">
+                <div class="role-header">
+                    <div class="role-info">
+                        <h3>Data Migration Specialist</h3>
+                        <p class="company">Nordhealth</p>
+                        <p class="period">February 2025 – Present</p>
+                    </div>
+                    <div class="role-badge">
+                        <span class="badge-active">Currently Working</span>
+                    </div>
+                </div>
+                <div class="role-description">
+                    <p>
+                        Specializing in veterinary practice management system migrations, I help clinics across the globe 
+                        seamlessly transition their data to Provet Cloud—a modern veterinary Practice Management System (PMS) by Nordhealth. 
+                        Working with sensitive healthcare data requires precision, attention to detail, and robust validation processes.
+                    </p>
+                </div>
+                <div class="role-tech">
+                    <h4>Technologies & Tools</h4>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pydantic</span>
+                        <span class="tech-tag">AWS EC2</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">ETL Pipelines</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Successful Migrations -->
+            <div class="migrations-section" data-animate="fade-up" data-delay="200">
+                <h3 class="subsection-title">
+                    <span class="checkmark">✅</span> Successful Data Migrations
+                </h3>
+                <div class="migrations-grid">
+                    <div class="migration-card">
+                        <div class="migration-flag">🇫🇮</div>
+                        <div class="migration-info">
+                            <h4>Katse</h4>
+                            <p class="migration-country">Finland</p>
+                            <p class="migration-tool">Kliniq</p>
+                        </div>
+                    </div>
+                    <div class="migration-card">
+                        <div class="migration-flag">🇬🇧</div>
+                        <div class="migration-info">
+                            <h4>Hatchmoor</h4>
+                            <p class="migration-country">United Kingdom</p>
+                            <p class="migration-tool">Assisi</p>
+                        </div>
+                    </div>
+                    <div class="migration-card">
+                        <div class="migration-flag">🇫🇮</div>
+                        <div class="migration-info">
+                            <h4>Kasarmivet</h4>
+                            <p class="migration-country">Finland</p>
+                            <p class="migration-tool">Kliniq</p>
+                        </div>
+                    </div>
+                    <div class="migration-card">
+                        <div class="migration-flag">🇬🇧</div>
+                        <div class="migration-info">
+                            <h4>Orchard Vets</h4>
+                            <p class="migration-country">United Kingdom</p>
+                            <p class="migration-tool">Assisi</p>
+                        </div>
+                    </div>
+                    <div class="migration-card">
+                        <div class="migration-flag">🇵🇹</div>
+                        <div class="migration-info">
+                            <h4>Das Conchas</h4>
+                            <p class="migration-country">Portugal</p>
+                            <p class="migration-tool">V-Quadrat</p>
+                        </div>
+                    </div>
+                    <div class="migration-card">
+                        <div class="migration-flag">🇬🇧</div>
+                        <div class="migration-info">
+                            <h4>Dafne Vets</h4>
+                            <p class="migration-country">United Kingdom</p>
+                            <p class="migration-tool">Assisi</p>
+                        </div>
+                    </div>
+                    <div class="migration-card">
+                        <div class="migration-flag">🇦🇹</div>
+                        <div class="migration-info">
+                            <h4>Dr. Krebitz-Gressl</h4>
+                            <p class="migration-country">Klagenfurt, Austria</p>
+                            <p class="migration-tool">VQuadrat</p>
+                        </div>
+                    </div>
+                    <div class="migration-card">
+                        <div class="migration-flag">🇬🇧</div>
+                        <div class="migration-info">
+                            <h4>Newton Clarke</h4>
+                            <p class="migration-country">United Kingdom</p>
+                            <p class="migration-tool">Ezvetpro</p>
+                        </div>
+                    </div>
+                    <div class="migration-card">
+                        <div class="migration-flag">🇫🇮</div>
+                        <div class="migration-info">
+                            <h4>KeskiSavon</h4>
+                            <p class="migration-country">Finland</p>
+                            <p class="migration-tool">Kliniq</p>
+                        </div>
+                    </div>
+                    <div class="migration-card">
+                        <div class="migration-flag">🇸🇰</div>
+                        <div class="migration-info">
+                            <h4>Hardwood</h4>
+                            <p class="migration-country">Slovakia</p>
+                            <p class="migration-tool">Docut</p>
+                        </div>
+                    </div>
+                    <div class="migration-card">
+                        <div class="migration-flag">🇵🇹</div>
+                        <div class="migration-info">
+                            <h4>Bicuda</h4>
+                            <p class="migration-country">Portugal</p>
+                            <p class="migration-tool">OrangestCsv</p>
+                        </div>
+                    </div>
+                    <div class="migration-card">
+                        <div class="migration-flag">🇸🇪</div>
+                        <div class="migration-info">
+                            <h4>Magleberg</h4>
+                            <p class="migration-country">Sweden</p>
+                            <p class="migration-tool">Dolittle</p>
+                        </div>
+                    </div>
+                    <div class="migration-card">
+                        <div class="migration-flag">🇭🇺</div>
+                        <div class="migration-info">
+                            <h4>Alsonemedi</h4>
+                            <p class="migration-country">Hungary</p>
+                            <p class="migration-tool">Doki</p>
+                        </div>
+                    </div>
+                    <div class="migration-card">
+                        <div class="migration-flag">🇺🇸</div>
+                        <div class="migration-info">
+                            <h4>Equine Innovations</h4>
+                            <p class="migration-country">United States</p>
+                            <p class="migration-tool">Acesoft</p>
+                        </div>
+                    </div>
+                    <div class="migration-card">
+                        <div class="migration-flag">🇺🇸</div>
+                        <div class="migration-info">
+                            <h4>Tharp</h4>
+                            <p class="migration-country">United States</p>
+                            <p class="migration-tool">Cornerstone</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">Previous Professional Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-animate="fade-up" data-delay="100">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>AR Collaboration Systems Developer</h3>
+                            <span class="timeline-period">Nov 2024 – Feb 2025</span>
+                        </div>
+                        <p class="timeline-company">University of Oulu, Immersive Technologies</p>
+                        <ul class="timeline-details">
+                            <li>Designed AR collaborator system architecture (mobile front-end & database/APIs back-end)</li>
+                            <li>Contributed to defining Sustainable Development Goals (SDGs) for IMMERSE organization</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>Python</span><span>Kotlin</span><span>RestAPI</span><span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-animate="fade-up" data-delay="150">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Summer Research Intern</h3>
+                            <span class="timeline-period">Jun 2024 – Jul 2024</span>
+                        </div>
+                        <p class="timeline-company">University of Oulu</p>
+                        <ul class="timeline-details">
+                            <li>Conducted research in computer science domain</li>
+                            <li>Collaborated with academic professionals on innovative projects</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-animate="fade-up" data-delay="200">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>FinTech Software Developer</h3>
+                            <span class="timeline-period">Dec 2022 – Jun 2023</span>
+                        </div>
+                        <p class="timeline-company">Ernyka Holding, Cryptocurrency Wallets</p>
+                        <ul class="timeline-details">
+                            <li>Maintained cryptocurrency wallet and trading applications simultaneously</li>
+                            <li>Collaborated with QA and BA teams to enhance functionality</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>Flutter</span><span>Sentry</span><span>RestAPI</span><span>Jenkins</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-animate="fade-up" data-delay="250">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Full-Stack Developer</h3>
+                            <span class="timeline-period">Apr 2021 – Oct 2022</span>
+                        </div>
+                        <p class="timeline-company">Narvan Startup Studio, FinTech Applications</p>
+                        <ul class="timeline-details">
+                            <li>Developed stock broker app from scratch in a fast-paced startup environment</li>
+                            <li>Mentored summer interns through code reviews and monthly feedback</li>
+                            <li>Integrated third-party APIs to optimize development time</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>Flutter</span><span>Cloud Firestore</span><span>Azure DevOps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-animate="fade-up" data-delay="300">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>SaaS Developer</h3>
+                            <span class="timeline-period">Jul 2020 – Mar 2021</span>
+                        </div>
+                        <p class="timeline-company">Erfan Salamat, Healthcare Applications</p>
+                        <ul class="timeline-details">
+                            <li>Contributed to health service application development</li>
+                            <li>Created internal tools for patient authentication and authorization</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>Python</span><span>Flutter</span><span>RestAPI</span><span>Apache Hive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category" data-animate="fade-up" data-delay="100">
+                    <div class="skill-icon">💻</div>
+                    <h3>Languages</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">Dart</span>
+                        <span class="skill-item">Kotlin</span>
+                        <span class="skill-item">SQL</span>
+                        <span class="skill-item">Matlab</span>
+                    </div>
+                </div>
+                <div class="skill-category" data-animate="fade-up" data-delay="150">
+                    <div class="skill-icon">🛠️</div>
+                    <h3>Frameworks & Tools</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Flutter</span>
+                        <span class="skill-item">Pydantic</span>
+                        <span class="skill-item">Spark</span>
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">Jenkins</span>
+                    </div>
+                </div>
+                <div class="skill-category" data-animate="fade-up" data-delay="200">
+                    <div class="skill-icon">☁️</div>
+                    <h3>Cloud & Databases</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">AWS</span>
+                        <span class="skill-item">Cloudflare</span>
+                        <span class="skill-item">Firebase</span>
+                        <span class="skill-item">MySQL</span>
+                    </div>
+                </div>
+                <div class="skill-category" data-animate="fade-up" data-delay="250">
+                    <div class="skill-icon">🤖</div>
+                    <h3>ML & NLP</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Sklearn</span>
+                        <span class="skill-item">MLLib</span>
+                        <span class="skill-item">NLTK</span>
+                        <span class="skill-item">SpaCy</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-animate="fade-up" data-delay="100">
+                    <div class="project-header">
+                        <div class="project-icon">📊</div>
+                        <a href="https://github.com/KamandShayegan/a-bigdata-clickstream-analysis" target="_blank" rel="noopener" class="project-github-link">View on GitHub →</a>
+                    </div>
+                    <h3 class="project-title">E-Shopping Clickstream Analysis</h3>
+                    <p class="project-description">
+                        Big data analysis on clickstream dataset for a clothing company. Built and evaluated 
+                        a machine learning model achieving <strong>89% accuracy</strong> in predicting purchased items.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Apache Spark</span>
+                        <span>ML Pipelines</span>
+                        <span>Matplotlib</span>
+                    </div>
+                    <div class="project-highlight">
+                        <span class="highlight-badge">🏆 Grade: 5/5</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-animate="fade-up" data-delay="200">
+                    <div class="project-header">
+                        <div class="project-icon">📚</div>
+                        <a href="https://github.com/KamandShayegan/Bookmark" target="_blank" rel="noopener" class="project-github-link">View on GitHub →</a>
+                    </div>
+                    <h3 class="project-title">Bookmark Flutter App</h3>
+                    <p class="project-description">
+                        Bachelor's thesis project—a full-stack book tracking application. Conducted persona research, 
+                        wrote 30 user stories, and developed both front-end and back-end.
+                    </p>
+                    <div class="project-tech">
+                        <span>Flutter</span>
+                        <span>Python</span>
+                        <span>MySQL</span>
+                        <span>Google Auth</span>
+                    </div>
+                    <div class="project-highlight">
+                        <span class="highlight-badge">🎓 Bachelor's Thesis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section achievements" id="achievements">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">Achievements & Community</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card" data-animate="fade-up" data-delay="100">
+                    <div class="achievement-icon">🎓</div>
+                    <h3>University of Alberta Certificate</h3>
+                    <p>
+                        Completed Object-Oriented Design course certification, strengthening software 
+                        architecture and design pattern knowledge.
+                    </p>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/B6E8FCDPPW9U" target="_blank" rel="noopener" class="achievement-link">View certificate →</a>
+                </div>
+                <div class="achievement-card" data-animate="fade-up" data-delay="150">
+                    <div class="achievement-icon">👩‍🏫</div>
+                    <h3>Python Teacher at Code School Finland</h3>
+                    <p>
+                        Mentored Finnish and Japanese students during a 5-day coding camp, helping them tackle 
+                        Python challenges and complex problems.
+                    </p>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7172705486222311425/" target="_blank" rel="noopener" class="achievement-link">See the full story →</a>
+                </div>
+                <div class="achievement-card" data-animate="fade-up" data-delay="200">
+                    <div class="achievement-icon">🎤</div>
+                    <h3>Speaker at Oulu International School</h3>
+                    <p>
+                        Shared my programming journey with 25 talented students at the Digital Citizenship camp, 
+                        introducing coding games and tools to help kids start their programming path.
+                    </p>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7211978227693584384/" target="_blank" rel="noopener" class="achievement-link">See the full story →</a>
+                </div>
+                <div class="achievement-card" data-animate="fade-up" data-delay="250">
+                    <div class="achievement-icon">🎯</div>
+                    <h3>89% ML Model Accuracy</h3>
+                    <p>
+                        Achieved 89% accuracy training a machine learning model on a big open clickstream dataset 
+                        for e-commerce analysis.
+                    </p>
+                    <a href="https://github.com/KamandShayegan/a-bigdata-clickstream-analysis" target="_blank" rel="noopener" class="achievement-link">View on GitHub →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education" id="education">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">Education</h2>
+            <div class="education-grid">
+                <div class="education-card" data-animate="fade-up" data-delay="100">
+                    <div class="education-year">2023 – 2025</div>
+                    <h3>Master of Computer Science and Engineering</h3>
+                    <p class="education-school">University of Oulu, Finland</p>
+                    <p class="education-details">
+                        <strong>Thesis:</strong> Distributed Artificial Intelligence<br>
+                        <strong>GPA:</strong> 4.07/5
+                    </p>
+                </div>
+                <div class="education-card" data-animate="fade-up" data-delay="200">
+                    <div class="education-year">2017 – 2022</div>
+                    <h3>Bachelor of Computer Engineering</h3>
+                    <p class="education-school">Khajeh Nasir University of Technology, Iran</p>
+                    <p class="education-details">
+                        <strong>Thesis:</strong> Bookmark Flutter Application
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">Let's Connect</h2>
+            <p class="contact-intro" data-animate="fade-up" data-delay="100">
+                I'm always open to discussing new opportunities, collaborations, or just having a friendly chat about tech!
+            </p>
+            <div class="contact-links" data-animate="fade-up" data-delay="200">
+                <a href="mailto:w.kshayegan@gmail.com" class="contact-card" title="Click to send email">
+                    <button class="copy-email-btn" onclick="event.preventDefault(); copyEmail()" title="Copy email">
+                        <span class="copy-icon">📋</span>
+                        <span class="copy-success">✓</span>
+                    </button>
+                    <div class="contact-icon">📧</div>
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">w.kshayegan@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/kamand-shayegan-4361041a7/" target="_blank" rel="noopener" class="contact-card">
+                    <div class="contact-icon">💼</div>
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-value">Kamand Shayegan</span>
+                </a>
+                <a href="https://github.com/KamandShayegan" target="_blank" rel="noopener" class="contact-card">
+                    <div class="contact-icon">🐙</div>
+                    <span class="contact-label">GitHub</span>
+                    <span class="contact-value">KamandShayegan</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-tagline">Transforming data, one migration at a time 🐕</p>
+        </div>
+    </footer>
+
+    <!-- Games Hub Modal -->
+    <div class="games-hub-modal" id="gamesHubModal">
+        <div class="games-hub-container">
+            <button class="games-hub-close" id="gamesHubClose">×</button>
+            <h2 class="games-hub-title">🎮 Game Hub</h2>
+            <p class="games-hub-subtitle">Because tech should be fun!</p>
+            <div class="games-hub-grid">
+                <button class="game-hub-card" id="launchMemoryGame">
+                    <span class="game-hub-icon">🧠</span>
+                    <h3>Memory Match</h3>
+                </button>
+                <button class="game-hub-card" id="launchScrambleGame">
+                    <span class="game-hub-icon">🔀</span>
+                    <h3>Skill Scramble</h3>
+                </button>
+                <button class="game-hub-card" id="launchTimelineGame">
+                    <span class="game-hub-icon">📅</span>
+                    <h3>Timeline Order</h3>
+                </button>
+                <button class="game-hub-card" id="launchQuizGame">
+                    <span class="game-hub-icon">🤥</span>
+                    <h3>2 Truths & a Lie</h3>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="game/game.js"></script>
+    <script src="game/scramble.js"></script>
+    <script src="game/timeline.js"></script>
+    <script src="game/quiz.js"></script>
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        
+        // Apply saved theme on load
+        if (savedTheme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            themeToggle.textContent = '☀️';
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            
+            if (currentTheme === 'light') {
+                document.documentElement.removeAttribute('data-theme');
+                themeToggle.textContent = '🌙';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                themeToggle.textContent = '☀️';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        function copyEmail() {
+            navigator.clipboard.writeText('w.kshayegan@gmail.com').then(() => {
+                const btn = document.querySelector('.copy-email-btn');
+                btn.classList.add('copied');
+                setTimeout(() => btn.classList.remove('copied'), 2000);
+            });
+        }
+        
+        // Games Hub
+        const gamesHubModal = document.getElementById('gamesHubModal');
+        
+        document.getElementById('openGamesHub').addEventListener('click', () => {
+            gamesHubModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        document.getElementById('gamesHubClose').addEventListener('click', () => {
+            gamesHubModal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        gamesHubModal.addEventListener('click', (e) => {
+            if (e.target === gamesHubModal) {
+                gamesHubModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Track if game was launched from hub
+        window.launchedFromHub = false;
+        
+        document.getElementById('launchMemoryGame').addEventListener('click', () => {
+            window.launchedFromHub = true;
+            gamesHubModal.classList.remove('active');
+            document.body.style.overflow = '';
+            document.getElementById('playGameBtn').click();
+        });
+        
+        document.getElementById('launchScrambleGame').addEventListener('click', () => {
+            window.launchedFromHub = true;
+            gamesHubModal.classList.remove('active');
+            document.body.style.overflow = '';
+            document.getElementById('playScrambleBtn').click();
+        });
+        
+        document.getElementById('launchTimelineGame').addEventListener('click', () => {
+            window.launchedFromHub = true;
+            gamesHubModal.classList.remove('active');
+            document.body.style.overflow = '';
+            document.getElementById('playTimelineBtn').click();
+        });
+        
+        document.getElementById('launchQuizGame').addEventListener('click', () => {
+            window.launchedFromHub = true;
+            gamesHubModal.classList.remove('active');
+            document.body.style.overflow = '';
+            document.getElementById('playQuizBtn').click();
+        });
+    </script>
+</body>
+</html>
