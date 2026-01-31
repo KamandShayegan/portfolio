@@ -25,7 +25,7 @@ class TimelineGame {
             },
             {
                 id: 4,
-                title: 'Summer Research Intern',
+                title: 'Research Assistant',
                 company: 'University of Oulu',
                 period: 'Jun 2024 – Jul 2024',
                 icon: '🔬',

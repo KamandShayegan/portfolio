@@ -3,14 +3,81 @@
  * JavaScript for interactivity and animations
  */
 
+/** Successful data migrations: single source of truth (flag, name, tool). Grouped by country: US, UK, Finland, Sweden, then others. */
+const MIGRATIONS_DATA = [
+    // United States
+    { flag: '🇺🇸', name: 'Equine Innovations', tool: 'Acesoft' },
+    { flag: '🇺🇸', name: 'Tharp', tool: 'Cornerstone' },
+    { flag: '🇺🇸', name: 'Whitehills Clinic', tool: 'Avimark SQL' },
+    // United Kingdom
+    { flag: '🇬🇧', name: 'Hatchmoor', tool: 'Assisi' },
+    { flag: '🇬🇧', name: 'Orchard Vets', tool: 'Assisi' },
+    { flag: '🇬🇧', name: 'Dafne Vets', tool: 'Assisi' },
+    { flag: '🇬🇧', name: 'Newton Clarke', tool: 'Ezvetpro' },
+    // Finland
+    { flag: '🇫🇮', name: 'Katse', tool: 'Kliniq' },
+    { flag: '🇫🇮', name: 'Kasarmivet', tool: 'Kliniq' },
+    { flag: '🇫🇮', name: 'KeskiSavon', tool: 'Kliniq' },
+    // Sweden
+    { flag: '🇸🇪', name: 'Magleberg', tool: 'Dolittle' },
+    { flag: '🇸🇪', name: 'Veterinärgruppen i Tygelsjö', tool: 'Dolittle' },
+    // Portugal
+    { flag: '🇵🇹', name: 'Das Conchas', tool: 'V-Quadrat' },
+    { flag: '🇵🇹', name: 'Bicuda', tool: 'OrangestCsv' },
+    // Austria
+    { flag: '🇦🇹', name: 'Dr. Krebitz-Gressl', tool: 'VQuadrat' },
+    // Slovakia
+    { flag: '🇸🇰', name: 'Hardwood', tool: 'Docut' },
+    // Hungary
+    { flag: '🇭🇺', name: 'Alsonemedi', tool: 'Doki' },
+];
+
 document.addEventListener('DOMContentLoaded', () => {
+    renderMigrationCards();
     initNavbar();
     initScrollAnimations();
     initMobileMenu();
     initSmoothScroll();
     initTypingEffect();
     initMigrationCardAnimations();
+    initMigrationCountryCount();
 });
+
+/**
+ * Build migration cards from MIGRATIONS_DATA and inject into the deck
+ */
+function renderMigrationCards() {
+    const deck = document.getElementById('migrations-deck');
+    if (!deck) return;
+
+    deck.innerHTML = MIGRATIONS_DATA.map(({ flag, name, tool }) => `
+        <div class="migration-card">
+            <div class="migration-flag">${escapeHtml(flag)}</div>
+            <div class="migration-info">
+                <span class="migration-name-line"><h4>${escapeHtml(name)}</h4> <span class="migration-tool">${escapeHtml(tool)}</span></span>
+            </div>
+        </div>
+    `).join('');
+}
+
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+/**
+ * Set migration card title to "Successful data migrations over X countries"
+ */
+function initMigrationCountryCount() {
+    const deck = document.querySelector('.scroll-card-migrations .scroll-card-deck');
+    const countEl = document.getElementById('migration-country-count');
+    if (!deck || !countEl) return;
+
+    const flags = deck.querySelectorAll('.migration-flag');
+    const uniqueCountries = new Set(Array.from(flags).map(el => el.textContent.trim()));
+    countEl.textContent = '+' + uniqueCountries.size;
+}
 
 /**
  * Navbar scroll behavior
@@ -159,30 +226,32 @@ function initTypingEffect() {
 }
 
 /**
- * Staggered animation for migration cards
+ * Staggered animation for migration cards (only for cards NOT inside the scroll deck)
  */
 function initMigrationCardAnimations() {
     const migrationCards = document.querySelectorAll('.migration-card');
-    
+    const deck = document.querySelector('.scroll-card-deck');
+    const cardsToAnimate = deck
+        ? Array.from(migrationCards).filter(card => !deck.contains(card))
+        : Array.from(migrationCards);
+
+    if (cardsToAnimate.length === 0) return;
+
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                // Add staggered delay based on card position
-                const cardIndex = Array.from(migrationCards).indexOf(entry.target);
-                const delay = cardIndex * 50; // 50ms stagger
-                
+                const cardIndex = cardsToAnimate.indexOf(entry.target);
+                const delay = cardIndex * 50;
                 setTimeout(() => {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
                 }, delay);
-                
                 observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
 
-    migrationCards.forEach(card => {
-        // Set initial state
+    cardsToAnimate.forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
         card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';

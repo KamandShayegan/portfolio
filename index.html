@@ -23,6 +23,7 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="https://cv.kamandhub.com" class="nav-cv-btn" target="_blank" rel="noopener">CV</a></li>
             <li><button class="nav-games-btn" id="openGamesHub"><span>🎮</span> Games</button></li>
             <li><button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button></li>
         </ul>
@@ -72,6 +73,7 @@
                 <div class="hero-cta" data-animate="fade-up" data-delay="450">
                     <a href="#current-role" class="btn btn-primary">See My Current Work</a>
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="https://cv.kamandhub.com" class="btn btn-secondary" target="_blank" rel="noopener">CV</a>
                 </div>
             </div>
         </div>
@@ -114,138 +116,39 @@
                 </div>
             </div>
 
-            <!-- Successful Migrations -->
-            <div class="migrations-section" data-animate="fade-up" data-delay="200">
-                <h3 class="subsection-title">
-                    <span class="checkmark">✅</span> Successful Data Migrations
-                </h3>
-                <div class="migrations-grid">
-                    <div class="migration-card">
-                        <div class="migration-flag">🇫🇮</div>
-                        <div class="migration-info">
-                            <h4>Katse</h4>
-                            <p class="migration-country">Finland</p>
-                            <p class="migration-tool">Kliniq</p>
+            <!-- Successful Migrations + Tools: two scrollable cards -->
+            <div class="migrations-cards-row" data-animate="fade-up" data-delay="200">
+                <div class="scroll-card scroll-card-migrations">
+                    <h3 class="scroll-card-title">
+                        <span class="checkmark">✅</span> Successful data migrations over <span id="migration-country-count" class="migration-count">0</span> countries
+                    </h3>
+                    <div class="scroll-card-deck" id="migrations-deck"></div>
+                </div>
+                <div class="scroll-card scroll-card-tools">
+                    <h3 class="scroll-card-title">
+                        <span class="tools-emoji">🛠️</span> Tools developed for Data migration
+                    </h3>
+                    <div class="scroll-card-deck">
+                        <div class="tool-item">
+                            <span class="tool-name">Vquadrat</span>
                         </div>
-                    </div>
-                    <div class="migration-card">
-                        <div class="migration-flag">🇬🇧</div>
-                        <div class="migration-info">
-                            <h4>Hatchmoor</h4>
-                            <p class="migration-country">United Kingdom</p>
-                            <p class="migration-tool">Assisi</p>
+                        <div class="tool-item">
+                            <span class="tool-name">Acesoft</span>
                         </div>
-                    </div>
-                    <div class="migration-card">
-                        <div class="migration-flag">🇫🇮</div>
-                        <div class="migration-info">
-                            <h4>Kasarmivet</h4>
-                            <p class="migration-country">Finland</p>
-                            <p class="migration-tool">Kliniq</p>
+                        <div class="tool-item">
+                            <span class="tool-name">Docut</span>
                         </div>
-                    </div>
-                    <div class="migration-card">
-                        <div class="migration-flag">🇬🇧</div>
-                        <div class="migration-info">
-                            <h4>Orchard Vets</h4>
-                            <p class="migration-country">United Kingdom</p>
-                            <p class="migration-tool">Assisi</p>
+                        <div class="tool-item">
+                            <span class="tool-name">OrangestCSV</span>
                         </div>
-                    </div>
-                    <div class="migration-card">
-                        <div class="migration-flag">🇵🇹</div>
-                        <div class="migration-info">
-                            <h4>Das Conchas</h4>
-                            <p class="migration-country">Portugal</p>
-                            <p class="migration-tool">V-Quadrat</p>
+                        <div class="tool-item">
+                            <span class="tool-name">Avimark SQL</span>
                         </div>
-                    </div>
-                    <div class="migration-card">
-                        <div class="migration-flag">🇬🇧</div>
-                        <div class="migration-info">
-                            <h4>Dafne Vets</h4>
-                            <p class="migration-country">United Kingdom</p>
-                            <p class="migration-tool">Assisi</p>
+                        <div class="tool-item">
+                            <span class="tool-name">Doki</span>
                         </div>
-                    </div>
-                    <div class="migration-card">
-                        <div class="migration-flag">🇦🇹</div>
-                        <div class="migration-info">
-                            <h4>Dr. Krebitz-Gressl</h4>
-                            <p class="migration-country">Klagenfurt, Austria</p>
-                            <p class="migration-tool">VQuadrat</p>
-                        </div>
-                    </div>
-                    <div class="migration-card">
-                        <div class="migration-flag">🇬🇧</div>
-                        <div class="migration-info">
-                            <h4>Newton Clarke</h4>
-                            <p class="migration-country">United Kingdom</p>
-                            <p class="migration-tool">Ezvetpro</p>
-                        </div>
-                    </div>
-                    <div class="migration-card">
-                        <div class="migration-flag">🇫🇮</div>
-                        <div class="migration-info">
-                            <h4>KeskiSavon</h4>
-                            <p class="migration-country">Finland</p>
-                            <p class="migration-tool">Kliniq</p>
-                        </div>
-                    </div>
-                    <div class="migration-card">
-                        <div class="migration-flag">🇸🇰</div>
-                        <div class="migration-info">
-                            <h4>Hardwood</h4>
-                            <p class="migration-country">Slovakia</p>
-                            <p class="migration-tool">Docut</p>
-                        </div>
-                    </div>
-                    <div class="migration-card">
-                        <div class="migration-flag">🇵🇹</div>
-                        <div class="migration-info">
-                            <h4>Bicuda</h4>
-                            <p class="migration-country">Portugal</p>
-                            <p class="migration-tool">OrangestCsv</p>
-                        </div>
-                    </div>
-                    <div class="migration-card">
-                        <div class="migration-flag">🇸🇪</div>
-                        <div class="migration-info">
-                            <h4>Magleberg</h4>
-                            <p class="migration-country">Sweden</p>
-                            <p class="migration-tool">Dolittle</p>
-                        </div>
-                    </div>
-                    <div class="migration-card">
-                        <div class="migration-flag">🇸🇪</div>
-                        <div class="migration-info">
-                            <h4>Veterinärgruppen i Tygelsjö</h4>
-                            <p class="migration-country">Sweden</p>
-                            <p class="migration-tool">Dolittle</p>
-                        </div>
-                    </div>
-                    <div class="migration-card">
-                        <div class="migration-flag">🇭🇺</div>
-                        <div class="migration-info">
-                            <h4>Alsonemedi</h4>
-                            <p class="migration-country">Hungary</p>
-                            <p class="migration-tool">Doki</p>
-                        </div>
-                    </div>
-                    <div class="migration-card">
-                        <div class="migration-flag">🇺🇸</div>
-                        <div class="migration-info">
-                            <h4>Equine Innovations</h4>
-                            <p class="migration-country">United States</p>
-                            <p class="migration-tool">Acesoft</p>
-                        </div>
-                    </div>
-                    <div class="migration-card">
-                        <div class="migration-flag">🇺🇸</div>
-                        <div class="migration-info">
-                            <h4>Tharp</h4>
-                            <p class="migration-country">United States</p>
-                            <p class="migration-tool">Cornerstone</p>
+                        <div class="tool-item">
+                            <span class="tool-name">Ezvetpro</span>
                         </div>
                     </div>
                 </div>
@@ -280,7 +183,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3>Summer Research Intern</h3>
+                            <h3>Research Assistant</h3>
                             <span class="timeline-period">Jun 2024 – Jul 2024</span>
                         </div>
                         <p class="timeline-company">University of Oulu</p>
@@ -457,15 +360,6 @@
             <h2 class="section-title" data-animate="fade-up">Achievements & Community</h2>
             <div class="achievements-grid">
                 <div class="achievement-card" data-animate="fade-up" data-delay="100">
-                    <div class="achievement-icon">🎓</div>
-                    <h3>University of Alberta Certificate</h3>
-                    <p>
-                        Completed Object-Oriented Design course certification, strengthening software 
-                        architecture and design pattern knowledge.
-                    </p>
-                    <a href="https://www.coursera.org/account/accomplishments/verify/B6E8FCDPPW9U" target="_blank" rel="noopener" class="achievement-link">View certificate →</a>
-                </div>
-                <div class="achievement-card" data-animate="fade-up" data-delay="150">
                     <div class="achievement-icon">👩‍🏫</div>
                     <h3>Python Teacher at Code School Finland</h3>
                     <p>
@@ -518,6 +412,14 @@
                         <strong>Thesis:</strong> Bookmark Flutter Application
                     </p>
                 </div>
+                <div class="education-card" data-animate="fade-up" data-delay="250">
+                    <div class="education-year">Certificate</div>
+                    <h3>Object-Oriented Design</h3>
+                    <p class="education-school">University of Alberta (Coursera)</p>
+                    <p class="education-details">
+                        <a href="https://www.coursera.org/account/accomplishments/verify/B6E8FCDPPW9U" target="_blank" rel="noopener" class="achievement-link">View certificate →</a>
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -557,6 +459,7 @@
     <footer class="footer">
         <div class="container">
             <p class="footer-tagline">Transforming data, one migration at a time 🐕</p>
+            <p class="footer-credit">This portfolio was created using LLMs in ~3 hours 😉</p>
         </div>
     </footer>
 

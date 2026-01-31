@@ -39,7 +39,7 @@ class MemoryGame {
     }
     
     createPlayButton() {
-        const migrationsSection = document.querySelector('.migrations-section');
+        const migrationsSection = document.querySelector('.migrations-cards-row');
         if (!migrationsSection) return;
         
         const triggerDiv = document.createElement('div');
