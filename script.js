@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
 console.log(`
 %c🐕 Welcome to Kamand's Portfolio!
 %c
-Looking for a Data Migration Specialist?
+Looking for a Technical Specialist to deliver fast and reliable results?
 Let's connect: w.kshayegan@gmail.com
 
 Built with ❤️ and lots of ☕

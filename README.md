@@ -1,6 +1,6 @@
 # Kamand Shayegan — Portfolio 🐕
 
-A personal portfolio showcasing my work as a **Data Migration Specialist** at Nordhealth, along with my skills, experience, and ambitions.
+A personal portfolio showcasing my work as a **AI-Driven Data Specialist** at Nordhealth, along with my skills, experience, and ambitions.
 
 ## ✨ Features
 

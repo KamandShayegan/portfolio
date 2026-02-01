@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamand Shayegan | Data Migration Specialist</title>
+    <title>Kamand Shayegan | Data Specialist</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="game/game.css">
     <link rel="stylesheet" href="game/scramble.css">
@@ -52,21 +52,21 @@
             <div class="hero-text">
                 <p class="hero-greeting" data-animate="fade-up">Hello, I'm</p>
                 <h1 class="hero-name" data-animate="fade-up" data-delay="100">Kamand Shayegan</h1>
-                <p class="hero-title" data-animate="fade-up" data-delay="200">Data Migration Specialist</p>
+                <p class="hero-title" data-animate="fade-up" data-delay="200">Data Specialist</p>
                 <p class="hero-location" data-animate="fade-up" data-delay="300">
                     <span class="location-icon">📍</span> 00180 Helsinki, Finland
                 </p>
                 <p class="hero-about" data-animate="fade-up" data-delay="350">
-                    Data Migration Specialist with 3+ years of programming experience. 
-                    I transform complex data challenges into seamless solutions, helping veterinary clinics transition their systems to <span class="highlight-brand">Provet</span> smoothly.
+                    AI-Driven Data Specialist with +4 years of programming experience. 
+                    I transform complex data challenges into seamless solutions, helping veterinary clinics migrate completely to <span class="highlight-brand">Provet</span> smoothly.
                 </p>
                 <div class="hero-stats" data-animate="fade-up" data-delay="400">
                     <div class="hero-stat">
-                        <span class="hero-stat-number">8</span>
+                        <span class="hero-stat-number">+8</span>
                         <span class="hero-stat-label">Countries Served</span>
                     </div>
                     <div class="hero-stat">
-                        <span class="hero-stat-number">3+</span>
+                        <span class="hero-stat-number">+4</span>
                         <span class="hero-stat-label">Years Experience</span>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
         <div class="container">
             <h2 class="section-title" data-animate="fade-up">
                 Current Role
-                <img src="https://em-content.zobj.net/source/apple/391/dog-face_1f436.png" alt="Dog" class="title-emoji">
+                <span class="title-emoji">🐩</span>
             </h2>
             <div class="role-card" data-animate="fade-up" data-delay="100">
                 <div class="role-header">
@@ -99,9 +99,9 @@
                 </div>
                 <div class="role-description">
                     <p>
-                        Specializing in veterinary practice management system migrations, I help clinics across the globe 
-                        seamlessly transition their data to Provet Cloud—a modern veterinary Practice Management System (PMS) by Nordhealth. 
-                        Working with sensitive healthcare data requires precision, attention to detail, and robust validation processes.
+                        Specializing in veterinary PMS migrations, I help clinics across the globe 
+                        seamlessly migrate to Provet —a modern veterinary PMS by Nordhealth- no matter where they are from or which system they are using.
+                        Working with sensitive healthcare data requires precision and attention to detail.
                     </p>
                 </div>
                 <div class="role-tech">
@@ -109,7 +109,7 @@
                     <div class="tech-tags">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">Pydantic</span>
-                        <span class="tech-tag">AWS EC2</span>
+                        <span class="tech-tag">AWS</span>
                         <span class="tech-tag">SQL</span>
                         <span class="tech-tag">ETL Pipelines</span>
                     </div>
@@ -265,18 +265,17 @@
                         <span class="skill-item">Dart</span>
                         <span class="skill-item">Kotlin</span>
                         <span class="skill-item">SQL</span>
-                        <span class="skill-item">Matlab</span>
                     </div>
                 </div>
                 <div class="skill-category" data-animate="fade-up" data-delay="150">
                     <div class="skill-icon">🛠️</div>
                     <h3>Frameworks & Tools</h3>
                     <div class="skill-items">
-                        <span class="skill-item">Flutter</span>
                         <span class="skill-item">Pydantic</span>
-                        <span class="skill-item">Spark</span>
                         <span class="skill-item">Git</span>
+                        <span class="skill-item">Spark</span>
                         <span class="skill-item">Jenkins</span>
+                        <span class="skill-item">Flutter</span>
                     </div>
                 </div>
                 <div class="skill-category" data-animate="fade-up" data-delay="200">
@@ -361,9 +360,9 @@
             <div class="achievements-grid">
                 <div class="achievement-card" data-animate="fade-up" data-delay="100">
                     <div class="achievement-icon">👩‍🏫</div>
-                    <h3>Python Teacher at Code School Finland</h3>
+                    <h3>Python Teacher at Code School Finland (2024 & 2025)</h3>
                     <p>
-                        Mentored Finnish and Japanese students during a 5-day coding camp, helping them tackle 
+                        Mentored Finnish and Japanese students during 5-day coding camps for two years, helping them tackle 
                         Python challenges and complex problems.
                     </p>
                     <a href="https://www.linkedin.com/feed/update/urn:li:activity:7172705486222311425/" target="_blank" rel="noopener" class="achievement-link">See the full story →</a>
@@ -432,8 +431,8 @@
                 I'm always open to discussing new opportunities, collaborations, or just having a friendly chat about tech!
             </p>
             <div class="contact-links" data-animate="fade-up" data-delay="200">
-                <a href="mailto:w.kshayegan@gmail.com" class="contact-card" title="Click to send email">
-                    <button class="copy-email-btn" onclick="event.preventDefault(); copyEmail()" title="Copy email">
+                <a href="mailto:w.kshayegan@gmail.com" class="contact-card contact-card-email" id="emailContactCard" title="Click to copy email">
+                    <button type="button" class="copy-email-btn" onclick="event.preventDefault(); event.stopPropagation(); copyEmail();" title="Copy email">
                         <span class="copy-icon">📋</span>
                         <span class="copy-success">✓</span>
                     </button>
@@ -458,8 +457,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="footer-tagline">Transforming data, one migration at a time 🐕</p>
-            <p class="footer-credit">This portfolio was created using LLMs in ~3 hours 😉</p>
+            <p class="footer-tagline">Transforming data, several migrations at a time 🐕</p>
+            <p class="footer-credit">This portfolio was created using LLMs in ~3 hours</p>
         </div>
     </footer>
 
@@ -527,7 +526,12 @@
                 setTimeout(() => btn.classList.remove('copied'), 2000);
             });
         }
-        
+
+        document.getElementById('emailContactCard').addEventListener('click', (e) => {
+            e.preventDefault();
+            copyEmail();
+        });
+
         // Games Hub
         const gamesHubModal = document.getElementById('gamesHubModal');
         
