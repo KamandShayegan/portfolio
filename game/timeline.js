@@ -8,50 +8,42 @@ class TimelineGame {
         // Jobs in correct order (newest to oldest - top to bottom)
         this.jobs = [
             {
-                id: 6,
-                title: 'Data Migration Specialist',
+                id: 5,
+                title: 'Veterinary Data Migration Specialist',
                 company: 'Nordhealth',
-                period: 'Feb 2025 – Present',
+                period: 'February/2025 – Now',
                 icon: '🐕',
                 startDate: new Date(2025, 1, 1)
             },
             {
-                id: 5,
-                title: 'AR Collaboration Developer',
+                id: 4,
+                title: 'AR Collaboration Systems Developer',
                 company: 'University of Oulu',
-                period: 'Nov 2024 – Feb 2025',
+                period: 'November/2024 – May/2025',
                 icon: '🥽',
                 startDate: new Date(2024, 10, 1)
-            },
-            {
-                id: 4,
-                title: 'Research Assistant',
-                company: 'University of Oulu',
-                period: 'Jun 2024 – Jul 2024',
-                icon: '🔬',
-                startDate: new Date(2024, 5, 1)
             },
             {
                 id: 3,
                 title: 'FinTech Software Developer',
                 company: 'Ernyka Holding',
-                period: 'Dec 2022 – Jun 2023',
+                period: 'December/2022 – June/2023',
                 icon: '💰',
                 startDate: new Date(2022, 11, 1)
             },
             {
                 id: 2,
-                title: 'Full-Stack Developer',
+                title: 'FinTech Mobile Developer',
                 company: 'Narvan Startup Studio',
-                period: 'Apr 2021 – Oct 2022',
+                period: 'April/2021 – October/2022',
                 icon: '📈',
                 startDate: new Date(2021, 3, 1)
             },
             {
                 id: 1,
-                title: 'SaaS Developer',
+                title: 'Healthcare Mobile Developer',
                 company: 'Erfan Salamat',
-                period: 'Jul 2020 – Mar 2021',
+                period: 'July/2020 – March/2021',
                 icon: '🏥',
                 startDate: new Date(2020, 6, 1)
             }

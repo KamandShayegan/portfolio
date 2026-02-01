@@ -16,7 +16,7 @@ class QuizGame {
             },
             {
                 statements: [
-                    { text: "Kamand currently works at Nordhealth as a Data Migration Specialist", isLie: false },
+                    { text: "Kamand currently works at Nordhealth as a Veterinary Data Migration Specialist", isLie: false },
                     { text: "Kamand started her current role in February 2025", isLie: false },
                     { text: "Kamand migrates data for dental clinics", isLie: true }
                 ]
